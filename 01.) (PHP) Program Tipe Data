@@ -1,0 +1,32 @@
+<?php
+function welcome(){
+echo "=============================================================\n";
+echo "                      MENGETAHUI TIPE DATA\n";
+echo "                       B A H A S A    P H P\n";
+echo "=============================================================\n";
+}
+
+//ini adalah fungsi void  yang berisi tipe data 
+function coba(){
+    $x = " Hello World\n";
+    $y = 'F';
+    $num =12;
+    $float =12.67;
+    $bool =True;
+    $bool1 =false;
+    $array = array(3,2,4,5);
+
+
+// ini fungsi untuk mencetak atau print
+    var_dump("ini adalah tipe data String = \n".$x);//memakai titik (.)
+    var_dump("ini adalah tipe data char = \n".$y);
+    var_dump("ini adalah tipe data integer = \n".$num);
+    var_dump("ini adalah tipe data Boolean (Benar/True) = \n".$bool);
+    var_dump("ini adalah tipe data Boolean (Salah/False) = \n".$bool1);
+    var_dump("ini adalah tipe data array = \n".$array);
+}
+
+welcome();
+coba();
+?>
+

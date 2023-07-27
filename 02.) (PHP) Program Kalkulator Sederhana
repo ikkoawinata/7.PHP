@@ -1,0 +1,88 @@
+<?php
+function welcome()
+{
+    echo "=========================================================\n";
+    echo "               P    R   O   G   R   A   M \n";
+    echo "         K A L K U L A T O R   S E D E R H A N A \n";
+    echo "                      BAHASA PHP \n";
+    echo "========================================================= \n";
+}
+
+function tabel()
+{
+    echo "|                     PILIH OPERATOR                  |\n";
+    echo "=====================================================\n";
+    echo "1. |PENJUMLAHAN                                       |\n";
+    echo "2. |PENGURANGAN                                       |\n";
+    echo "3. |PERKALIAN                                         |\n";
+    echo "4. |PEMBAGIAN                                         |\n";
+    echo "5. |MODULUS                                           |\n";
+    echo "=====================================================\n";
+}
+
+welcome();
+tabel();
+$a = 0;
+$b = 0;
+$j = '';
+$hasil = 0;
+$masukan = 0;
+
+
+do{
+echo "\n";
+$a = floatval(readline("Masukkan angka pertama = "));
+$b = floatval(readline("Masukkan angka kedua = "));
+echo "===================================================\n";
+
+$masukan = intval(readline("masukkan operator sesuai dengan tabel : "));
+
+switch ($masukan) {
+    case 1:
+        echo "\n------ 1.) PENJUMLAHAN ------\n ";
+        $hasil = $a + $b;
+        echo "hasil dari penjumlahan " . $a . " + " . $b . " = " . $hasil;
+        echo " \nhasilnya adalah = " . $hasil;
+        break;
+
+    case 2:
+        echo "------ 2.) PENGURANGAN ------\n ";
+        $hasil = $a - $b;
+        echo " hasil dari pengurangan " . $a . " - " . $b . " = " . $hasil;
+        echo " \nhasilnya adalah = " . $hasil;
+        break;
+
+    case 3:
+        echo "------ 3.) PERKALIAN ------\n ";
+        $hasil = $a * $b;
+        echo " hasil dari perkalian " . $a . " * " . $b . " = " . $hasil;
+        echo " \nhasilnya adalah = " . $hasil;
+        break;
+
+    case 4:
+        echo "------ 4.) PEMBAGIAN ------\n ";
+        $hasil = $a / $b;
+        echo "hasil dari pembagian " . $a . " / " . $b . " = " . $hasil;
+        echo "\nhasilnya adalah = " . $hasil;
+        break;
+
+    case 5:
+        echo "------ 5.) MODULUS ------\n ";
+        $hasil = $a % $b;
+        echo " hasil dari perkalian " . $a . " % " . $b . " = " . $hasil;
+        echo " \nhasilnya adalah = " . $hasil;
+        break;
+
+        default:
+        echo "pilihan tidak sesuai dengan tabel \n";
+        break;
+
+}
+
+$j =readline("\nMau coba lagi ? [Y/N] : \n");
+}while ($j == 'Y' || $j == 'y');
+echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+echo " terima kasih telah menggunakan porgram ini\n";
+echo " made by ikkoc_awinata\n";
+
+?>

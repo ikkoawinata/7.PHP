@@ -1,0 +1,21 @@
+<?php
+
+function welcome(){
+    echo "====================================================================\n";
+    echo "                      P  R  O  G  R  A  M\n";
+    echo "                 P E R U L A N G A N   W H I L E\n";
+    echo "                           BAHASA PHP\n";
+    echo "\n====================================================================\n";
+}
+
+
+welcome();
+$n =1;
+
+while ($n <= 5){
+    echo $n." I WANNA BE YOURS\n";
+    $n++;
+}
+
+?>
+

@@ -1,0 +1,21 @@
+<?php
+
+function welcome() {
+    echo "===========================================================\n";
+    echo "            P    R    O    G     R     A     M            \n";
+    echo "                 ENTERING LIKE PYTHON                    \n";
+    echo "                B A H A S A   J A V A                   \n";
+    echo "===========================================================\n";
+}
+
+function main() {
+    welcome();
+//ini fungsi untuk enter dan membaca 
+    echo "Enter untuk lanjut: ";
+    $input = trim(fgets(STDIN));
+    echo "i love you\n";
+}
+
+main();
+
+?>

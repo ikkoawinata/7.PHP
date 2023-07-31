@@ -1,0 +1,416 @@
+<?php
+
+function welcome()
+{
+    echo "======================================================================\n";
+    echo "   S E L A M A T   D A T A N G   D I   P R O G R A M \n";
+    echo "  KUMPULAN RUMUS LUAS PERMUKAAN BANGUNAN DAN VOLUME\n";
+    echo "                         BAHASA PHP\n";
+    echo "=======================================================================\n";
+}
+
+
+function tabel()
+{
+    echo "================================================================================\n";
+    echo "A. R U M U S  K E L I L I N G  &  L U A S  B A N G U N  D A T A R \t\t \n";
+    echo "================================================================================\n";
+    echo "1. | Menghitung Keliling Lingkaran (JARI-JARI) (phi = 22/7)               \t|\n";
+    echo "2. | Menghitung Keliling Lingkaran (DIAMETER) (phi = 22/7)                \t|\n";
+    echo "3. | Menghitung Keliling Lingkaran (JARI-JARI) (phi = 3,14)               \t|\n";
+    echo "4. | Menghitung Keliling Lingkaran (DIAMETER) (phi = 3,14)                \t|\n";
+    echo "5. | Menghitung Panjang Busur pada Lingkaran                              \t|\n";
+    echo "6. | Menghitung Keliling Persegi                                          \t|\n";
+    echo "7. | Menghitung Luas Persegi                                              \t|\n";
+    echo "8. | Menghitung Keliling Persegi Panjang                                  \t|\n";
+    echo "9. | Menghitung Luas Persegi Panjang                                      \t|\n";
+    echo "10.| Menghitung Keliling Jajar Genjang                                    \t|\n";
+    echo "11.| Menghitung Luas Jajar Genjang                                        \t|\n";
+    echo "12.| Menghitung Keliling Segitiga                                         \t|\n";
+    echo "13.| Menghitung Luas Segitiga                                             \t|\n";
+    echo "14.| Menghitung Luas Belah Ketupat                                        \t|\n";
+    echo "15.| Menghitung Luas Trapesium                                            \t|\n";
+    echo "==============================================================================\n";
+    echo "B. R U M U S  L U A S  P E R M U K A A N  &  V O L U M E  B A N G U N  R U A N G\n";
+    echo "==============================================================================\n";
+    echo "16.| Menghitung Luas Kubus                                                \t|\n";
+    echo "17.| Menghitung Volume Kubus                                              \t|\n";
+    echo "18.| Menghitung Luas Balok                                                \t|\n";
+    echo "19.| Menghitung Volume Balok                                              \t|\n";
+    echo "20.| Menghitung Luas Permukaan Limas Segiempat                            \t|\n";
+    echo "21.| Menghitung Volume Limas Segiempat                                    \t|\n";
+    echo "22.| Menghitung Volume Prisma Segitiga                                    \t|\n";
+    echo "23.| Menghitung Luas Prisma Segitiga                                      \t|\n";
+    echo "24.| Menghitung Volume Limas Segitiga                                     \t|\n";
+    echo "25.| Menghitung Luas Selimut Tabung (Jari-Jari)                           \t|\n";
+    echo "26.| Menghitung Luas Selimut Tabung (diameter)                            \t|\n";
+    echo "27.| Menghitung Luas Permukaan Tabung (Jari-Jari)                         \t|\n";
+    echo "28.| Menghitung Volume Tabung (Jari-Jari)                                 \t|\n";
+    echo "29.| Menghitung Luas Selimut Kerucut                                      \t|\n";
+    echo "30.| Menghitung Luas Permukaan Kerucut                                    \t|\n";
+    echo "31.| Menghitung Volume Kerucut                                            \t|\n";
+    echo "32.| Menghitung Luas Bola                                                 \t|\n";
+    echo "33.| Menghitung Volume Bola                                               \t|\n";
+    // echo"34.| Menghitung Luas Jajar Genjang                                      \t|");
+    echo "==============================================================================\n";
+}
+
+function main()
+{
+    $pytagoras = " ";
+    $j = '';
+    $r = " ";
+    $d = " ";
+    $t = " ";
+    $T = " ";
+    $rumusa = " ";
+    $rumub = " ";
+    $pilihan = " ";
+    $keliling = " ";
+    $busur = " ";
+    $p = " ";
+    $lebar = " ";
+    $L_alas = " ";
+    $L_segitiga = " ";
+    $L_limas = " ";
+    $sisisegitiga = " ";
+    $sqrt = " ";
+    $pytagoras = " ";
+
+
+    do{
+    $pilihan = (int) readline("Silahkan masukan pilihan anda sesuai dengan pada tabel : \n");
+    switch ($pilihan) {
+        case 1:
+            echo "---- 1.) MENGHITUNG KELILING LINGKARAN (JARI-JARI) (phi = 22/7) ----\n ";
+            $r = floatval(readline("masukkan jari-jari lingkaran : \n"));
+            $keliling = 2 * 22 / 7 * $r;
+            echo "\nRumusnya yaitu : Keliling = 2 * 22/7 * r = 2 * 22/7 * " . $r . " = " . $keliling;
+            echo "\nKeliling lingkaran dengan jari-jari" . $r . " adalah : " . $keliling;
+            break;
+
+        case 2:
+            echo "---- 2.) MENGHITUNG KELILING LINGKARAN (DIAMETER) (phi = 22/7) ----\n ";
+            $d = floatval(readline("masukkan diameter lingkaran : \n"));
+            $keliling = 22 / 7 * $d;
+            echo "\nRumusnya yaitu : Keliling =  22/7 * d = 2 * 22/7 * " . $d . " = " . $keliling;
+            echo "\nKeliling lingkaran dengan dengan diameter " . $d . " adalah : " . $keliling;
+            break;
+
+        case 3:
+            echo "---- 3.) MENGHITUNG KELILING LINGKARAN (JARI-JARI) (phi = 3,14) ----\n ";
+            $r = floatval(readline("masukkan jari - jari lingkaran : \n"));
+            $keliling = 2 * 3.14 * $r;
+            echo "\nRumusnya yaitu : Keliling =  2* 3.14 * r = 2 * 3.14 * " . $r . " = " . $keliling;
+            echo "\nKeliling lingkaran dengan jari-jari " . $r . " adalah : " . $keliling;
+            break;
+
+        case 4:
+            echo "---- 4.) MENGHITUNG KELILING LINGKARAN (DIAMETER) (phi = 3,14)----\n ";
+            $d = floatval(readline("masukkan diameter lingkaran : \n"));
+            $keliling = 3.14 * $d;
+            echo "\nRumusnya yaitu : Keliling =  3.14 * d = 3.14 * " . $d . " = " . $keliling;
+            echo "\nKeliling lingkaran dengan diameter " . $d . " adalah : " . $keliling;
+            break;
+
+        case 5:
+            echo "----5.) MENGHITUNG PANJANG BUSUR LINGKARAN----\n ";
+            $busur = floatval(readline("masukkan busur lingkaran : \n"));
+            $r = floatval(readline("masukkan jari-jari lingkaran : \n"));
+            $rumusa = $busur / 360 * 22 / 7 * $r * 2;
+            $rumusb = $busur / 360 * 3.14 * $r * 2;
+            echo " \nRumus 1 (phi = 22/7) yaitu = busur/360 * phi * r * 2 = " . $busur . " / 360 * 22/7 * " . $r . " * 2 = " . $rumusa;
+            echo " \nRumus 1 (phi = 22/7) yaitu = busur/360 * phi * r * 2 = " . $busur . " / 360 * 22/7 * " . $r . " * 2 = " . $rumusb;
+            break;
+
+        case 6:
+            echo "---- 6.) MENGHITUNG KELILING PERSEGI ----\n ";
+            $d = floatval(readline("masukkan sisi persegi : \n"));
+            $keliling = 4 * $d;
+            echo "\nRumusnya yaitu : Keliling =  4 * sisi = 4 * " . $d . " = " . $keliling;
+            echo "\nKeliling perseginya adalah = " . $keliling;
+            break;
+
+        case 7:
+            echo "---- 7.) MENGHITUNG LUAS PERSEGI  ----\n ";
+            $d = floatval(readline("masukkan sisi persegi : \n"));
+            $keliling = pow($d, $d);
+            echo "\nRumusnya yaitu : Keliling =  d *d = d * " . $d . " = " . $keliling;
+            echo "\nluas perseginya adalah = " . $keliling;
+            break;
+
+
+        case 8:
+            echo "----  8.) MENGHITUNG KELILING PERSEGI PANJANG  ----\n ";
+            $p = floatval(readline("masukkan panjang bangunan : \n"));
+            $lebar = floatval(readline("masukkan lebar bangunan : \n"));
+            $keliling = 2 * ($p + $lebar);
+            echo "\nRumusnya yaitu : 2 * (panjang + lebar = 2 * (" . $p . " + " . $lebar . " ) = " . $keliling;
+            break;
+
+        case 9:
+            echo "---- 9.) MENGHITUNG LUAS PERSEGI PANJANG   ----\n ";
+            $p = floatval(readline("masukkan panjang bangunan : \n"));
+            $lebar = floatval(readline("masukkan lebar bangunan : \n"));
+            $keliling = ($p * $lebar);
+            echo "\nRumusnya yaitu : (panjang * lebar = (" . $p . " * " . $lebar . " ) = " . $keliling;
+            break;
+
+        case 10:
+            echo "---- 10.) MENGHITUNG KELILING JAJAR GENJANG ----\n ";
+            $p = floatval(readline("masukkan panjang bangunan : \n"));
+            $lebar = floatval(readline("masukkan lebar bangunan : \n"));
+            $keliling = 2 * ($p + $lebar);
+            echo "\nRumusnya yaitu : 2 * (panjang + lebar = 2 * (" . $p . " + " . $lebar . " ) = " . $keliling;
+            break;
+
+        case 11:
+            echo "---- 11.) MENGHITUNG LUAS JAJAR GENJANG ----\n ";
+            $p /*alas*/= floatval(readline("masukkan alas bangunan : \n"));
+            $lebar /*tinggi*/= floatval(readline("masukkan tinggi bangunan : \n"));
+            $keliling = ($p * $lebar);
+            echo "\nRumusnya yaitu : Luas = alas * Tinggi = " . $p . " * " . $lebar . " = " . $keliling;
+            break;
+
+        case 12:
+            echo "---- 12.) MENGHITUNG KELILING SEGITIGA ----\n ";
+            $p /*p*/= floatval(readline("masukkan p : \n"));
+            $lebar /*q*/= floatval(readline("masukkan q : \n"));
+            $r /*r*/= floatval(readline("masukkan r: \n"));
+            $keliling = $p + $lebar + $r;
+            echo "\nrumusnya yaitu : Keliling = P + Q + R =" . $p . " + " . $lebar . " + " . $r . " = " . $keliling;
+            break;
+
+
+        case 13:
+            echo "----  13.)MENGHITUNG LUAS SEGITIGA ----\n ";
+            $p /*alas*/= floatval(readline("masukkan alas : \n"));
+            $lebar /*tinggi*/= floatval(readline("masukkan tinggi : \n"));
+            $keliling = 1.0 / 2.0 * $p * $lebar;
+            echo "\nRumusnya yaitu : Luas = 1/2 * alas * tinggi = 1/2 * " . $p . " * " . $lebar . " = " . $keliling;
+            break;
+
+        case 14:
+            echo "---- 14.)MENGHITUNG LUAS BELAH KETUPAT ----\n ";
+            $p /*diagonal 1*/= floatval(readline(" masukkan diagonal 1: \n"));
+            $lebar /*diagonal 2*/= floatval(readline("masukkan diagonal 2 : \n"));
+            $keliling = 1.0 / 2.0 * $p * $lebar;
+            echo "\nRumusnya yaitu : Luas = 1/2 * diagonal 1 * diagonal 2  = 1/2\ * " . $p . " * " . $lebar . " = " . $keliling;
+            break;
+
+        case 15:
+            echo "---- 15.)MENGHITUNG TRAPESIUM  ----\n ";
+            $p /* a*/= floatval(readline(" masukkan a: \n"));
+            $lebar /*b*/= floatval(readline("masukkan b : \n"));
+            $tinggi /*tinggi*/= floatval(readline("masukkan tinggi trapesium : \n"));
+            $keliling = ($p + $lebar) / 2 * $tinggi;
+            echo "\nRumusnya yaitu :(A+B)/2 * Tinggi = ( " . $p . " + " . $lebar . " ) / 2 * " . $tinggi . " = " . $keliling;
+            break;
+
+        case 16:
+            echo "---- 16.)MENGHITUNG LUAS KUBUS  ----\n ";
+            $r = floatval(readline(" masukkan rusuk kubus: \n"));
+            $keliling = 6 * $r * $r;
+            echo "\nRumusnya yaitu : Luas = 6 * rusuk * rusuk = 6 * " . $r . " * " . $r . " = " . $keliling;
+            break;
+
+
+        case 17:
+            echo "----17.)MENGHITUNG VOLUME KUBUS ----\n ";
+            $r = floatval(readline(" masukkan rusuk kubus: \n"));
+            $keliling = pow($r, 3);
+            echo "\nRumusnya yaitu : Luas = 6 * rusuk * rusuk = 6 * " . $r . " * " . $r . " = " . $keliling;
+            break;
+
+
+        case 18:
+            echo "---- 18.)MENGHITUNG LUAS BALOK----\n ";
+            $p /* a*/= floatval(readline(" masukkan panjang: \n"));
+            $lebar /*q*/= floatval(readline("masukkan lebar : \n"));
+            $tinggi /*tinggi*/= floatval(readline("masukkan tinggi trapesium : \n"));
+            $rumusa = 2 * ($p * $lebar) + 2 * ($p * $tinggi) + 2 * ($lebar * $tinggi);
+            echo "\nRumusnya yaitu : Luas = 2*(Panjang * lebar) + 2*(Panjang * tinggi) + 2*(lebar*tinggi) = 2 * (" . $p . " * " . $lebar . ") + 2 * (" . $p . " * " . $tinggi . ") + 2 * (" . $p . " * " . $tinggi . ") = " . $rumusa;
+            break;
+
+        case 19:
+            echo "---- 19.)MENGHITUNG VOLUME BALOK ----\n ";
+            $p /* alas*/= floatval(readline(" masukkan panjang: \n"));
+            $lebar /*luas alas*/= floatval(readline("masukkan luas alas : \n"));
+            $tinggi = floatval(readline("masukkan tinggi trapesium : \n"));
+            $rumusa = $p * $lebar * $tinggi;
+            echo "\nRumusnya yaitu : Volume = Panjang * Luas Alas * Tinggi = " . $p . " * " . $lebar . " * " . $tinggi . " = " . $rumusa;
+            break;
+
+
+        case 20:
+            echo "---- 20.) MENGHITUNG LUAS PERMUKAAN LIMAS SEGIEMPAT ----\n ";
+            $p /* alas*/= floatval(readline(" masukkan sisi alasnya: \n"));
+            $tinggi = floatval(readline("masukkan tinggi alas : \n"));
+            $L_alas = pow($p, 2);
+            $L_segitiga = 1.0 / 2.0 * $p * $tinggi;
+            $L_limas = (4 * $L_segitiga) + $L_alas;
+            echo "\nRumusnya yaitu : Luas = (4 * Luas Segitiga) + Luas Alas = (4 * " . $L_segitiga . " ) + " . $L_alas . " = " . $L_limas;
+            break;
+
+        case 21:
+            echo "---- 21.) MENGHITUNG VOLUME LIMAS SEGIEMPAT----\n ";
+            $p /* alas*/= floatval(readline(" masukkan luas alas: \n"));
+            $tinggi = floatval(readline("masukkan tinggi limas: \n"));
+            $L_alas = pow($p, $p);
+            $rumusa = 1.0 / 3.0 * $L_alas * $tinggi;
+            echo "\nRumusnya yaitu : Volume = 1/3 * Luas Alas * Tinggi = 1/3 * " . $L_alas . " * " . $tinggi . " = " . $rumusa;
+            break;
+
+        case 22:
+            echo "----  22.) MENGHITUNG VOLUME PRISMA SEGITIGA ----\n ";
+            $p /* L_alas*/= floatval(readline(" masukkan luas alas: \n"));
+            $tinggi = floatval(readline("masukkan tinggi limas: \n"));
+            $r /*tinggi T*/= floatval(readline("masukkan tinggi T: \n"));
+            $L_alas = 1.0 / 2.0 * $p * $tinggi;
+            $rumusa = $L_alas * $r;
+            echo "\nRumusnya yaitu : Volume = 1/2 * alas * tinggi * Tinggi = 1/2 *" . $p . " * " . $tinggi . " * " . $r . " = " . $rumusa;
+            break;
+
+        case 23:
+            echo "---- 23.) MENGHITUNG LUAS PERMUKAAN PRISMA SEGITIGA ----\n ";
+            echo " Lp Prisma Segitiga = Luas Selimut + Luas Alas \n";
+            $p /*sisi*/= floatval(readline("Masukkan sisi : \n"));
+            $lebar = floatval(readline("Masukkan lebar : \n"));
+            $tinggi /*lebar prisma*/= floatval(readline("Masukkan lebar prisma : \n"));
+            $sisisegitiga = pow($lebar, 2) - pow($tinggi, 2);
+            echo " hasil sisi segitiga yang hasilnya berbentuk akar : \n" . $sisisegitiga;
+            $sqrt = sqrt($sisisegitiga);
+            echo "\n akar dari " . $sisisegitiga . " yaitu = " . $sqrt;
+            $L_alas /*Luas Selimut*/= ($p * $lebar) + ($p * $tinggi) + ($p * $sqrt);
+            echo " \n Luas Selimut = (Panjang * lebar) + ( panjang * tinggi) + (panjang * tinggi (hasil akar) = " . $L_alas;
+            $d = 2 * (1 / 2 * $sqrt * $tinggi);
+            $keliling = $L_alas + $d;
+            echo "\nhasil dari Luas Permukaan Prisma Segitiga adalah : " . $keliling . "cm";
+            break;
+
+
+        case 24:
+            echo "---- 24.) MENGHITUNG VOLUME LIMAS SEGITIGA ----\n";
+            $r /*alas*/= floatval(readline("Masukkan alas limas segitiga = \n"));
+            $d /*tinggi*/= floatval(readline("masukkan tinggi limas segitiga = \n"));
+            $tinggi = floatval(readline("Masukkan tinggi alas limas = \n"));
+            $rumusa = 1 / 3 * $r * $d * $tinggi;
+            echo "\nHasilnya adalah : 1/3 * alas limas * Tinggi limas * tinggi alas = 1/3 * " . $r . " * " . $d . " * " . $tinggi . " = " . $rumusa;
+            break;
+
+
+        case 25:
+            echo "----25.) MENGHITUNG LUAS SELIMUT TABUNG (JARI-JARI) ----\n ";
+            $r = floatval(readline("Masukkan jari-jari tabung = \n"));
+            $tinggi = floatval(readline("Masukkan tinggi tabung = \n"));
+            $rumusa = 2 * 22 / 7 * $r * $tinggi;
+            $rumusb = 2 * (3.14 * $r) * $tinggi;
+            echo "\nhasil luas selimut (phi=22/7) : 2 * 22/7*r*tinggi = 2 * 22/7 * " . $r . " * " . $tinggi . " = " . $rumusa;
+            echo "\nhasil luas selimut (phi=3.14) : 2 * 3.14*r*tinggi = 2 * 22/7 * " . $r . " * " . $tinggi . " = " . $rumusb;
+            break;
+
+
+        case 26:
+            echo "---- 26.) MENGHITUNG LUAS SELIMUT TABUNG (DIAMETER) ----\n";
+            $d = floatval(readline("Masukkan jari-jari tabung = \n"));
+            $tinggi = floatval(readline(("Masukkan tinggi tabung = \n")));
+            $rumusa = 22 / 7 * $d * $tinggi;
+            $rumusb = 3.14 * $d * $tinggi;
+            echo "\nhasil luas selimut (phi=22/7) : 22/7*d*tinggi =  22/7 * " . $d . " * " . $tinggi . " = " . $rumusa;
+            echo "\nhasil luas selimut (phi=3.14) : 3.14*d*tinggi =  3.14 * " . $d . " * " . $tinggi . " = " . $rumusb;
+            break;
+
+
+        case 27:
+            echo "---- 27.) MENGHITUNG LUAS PERMUKAAN TABUNG (JARI-JARI)  ----\n";
+            $r = floatval(readline("Masukkan jari-jari tabung = \n"));
+            $tinggi = floatval(readline(("Masukkan tinggi tabung = \n")));
+            $rumusa = 2 * 22 / 7 * $r * ($r + $tinggi);
+            $rumusb = 2 * 3.14 * $r * ($r + $tinggi);
+            echo "\nhasil luas selimut (phi=22/7) : 2 * 22/7 * r * (r + t) = 2 * 22/7 * " . $r . " * ( " . $r . " + " . $tinggi . " ) = " . $rumusa;
+            echo "\nhasil luas selimut (phi=22/7) : 2 * 3.14 * r * (r + t) = 2 * 3.14 * " . $r . " * ( " . $r . " + " . $tinggi . " ) = " . $rumusb;
+            break;
+
+
+        case 28:
+            echo "---- 28.) MENGHITUNG VOLUME TABUNG (JARI-JARI)  ----\n";
+            $r = floatval(readline("Masukkan jari-jari tabung = \n"));
+            $tinggi = floatval(readline(("Masukkan tinggi tabung = \n")));
+            $rumusa = 22 / 7 * pow($r, 2) * $tinggi;
+            $rumusb = 3.14 * pow($r, 2) * $tinggi;
+            echo "\nRumus A yaitu : Volume = Phi * (r pangkat 2 * tinggi ) = 22/7 * " . pow($r, 2) . " * " . $tinggi . " = " . $rumusa;
+            echo "\nRumus B yaitu : Volume = Phi * (r pangkat 2 * tinggi ) = 3.14 * " . pow($r, 2) . " * " . $tinggi . " = " . $rumusb;
+            break;
+
+        case 29:
+            echo "---- 29.) MENGHITUNG LUAS SELIMUT KERUCUT ----\n";
+            $r = floatval(readline("Masukkan jari-jari kerucut = \n"));
+            $tinggi = floatval(readline(("Masukkan sisi kerucut  = \n")));
+            $pytagoras = pow($r, 2) + pow($tinggi, 2);
+            echo "\nHasil sisi segitiga yang hasilnya berbentuk akar = " . $pytagoras;
+            $sqrt = sqrt($pytagoras);
+            echo " \nakar dari " . $pytagoras . "adalah = " . $sqrt;
+            $rumusa = 22 / 7 * $r * $sqrt;
+            $rumusb = 3.14 * $r * $sqrt;
+            echo "\nRumus A yaitu : Luas = phi * r * sisi =  22/7 * " . $r . " * " . $tinggi . " = " . $rumusa;
+            echo "\nRumus B yaitu : Luas = phi * r * sisi =  3.14* " . $r . " * " . $tinggi . " = " . $rumusb;
+            break;
+
+        case 30:
+            echo "---- 30.) MENGHITUNG LUAS PERMUKAAN KERUCUT ----\n";
+            $r = floatval(readline("Masukkan jari-jari kerucut  = \n"));
+            $tinggi = floatval(readline("Masukkan sisi kerucut = \n"));
+            $rumusa = (22 / 7 * $r * ($r + $tinggi));
+            $rumusb = (3.14 * $r * ($r + $tinggi));
+            echo "\nRumus A yaitu : Luas = (phi * r * (r + tinggi sisi) = 22/7 * " . $r . " * ( " . $r . " + " . $tinggi . " ) = " . $rumusa;
+            echo "\nRumus b yaitu : Luas = (phi * r * (r + tinggi sisi) = 3.14 * " . $r . " * ( " . $r . " + " . $tinggi . " ) = " . $rumusb;
+            break;
+
+        case 31:
+            echo "---- 30.) MENGHITUNG LUAS PERMUKAAN KERUCUT ----\n";
+            $r = floatval(readline("Masukkan jari-jari kerucut  = \n"));
+            $tinggi = floatval(readline("Masukkan sisi kerucut = \n"));
+            $rumusa = 1.0 / 3.0 * 22.0 / 7.0 * pow($r, 2) * $tinggi;
+            $rumusb = 1.0 / 3.0 * 3.14 * pow($r, 2) * $tinggi;
+            echo "\nRumus A yaitu : Luas = 1/3 * phi * r pangkat 2 * tinggi = 1/3 * 22/7 * " . pow($r, 2) . " * " . $tinggi . " = " . $rumusa;
+            echo "\nRumus b yaitu : Luas = 1/3 * phi * r pangkat 2 * tinggi = 1/3 * 3.14 * " . pow($r, 2) . " * " . $tinggi . " = " . $rumusb;
+            break;
+
+
+        case 32:
+            echo "---- 32.) MENGHITUNG LUAS BOLA ----\n";
+            $r = floatval(readline("Masukkan jari-jari atau diameter bola  = \n"));
+            $rumusa = 4 * 22 / 7 * pow($r, 2);
+            $rumusb = 4 * 3.14 * pow($r, 2);
+            echo "\nRumus A yaitu : Luas = 4 * phi * r pangkat 2 = 4 * 22/7 * " . pow($r, 2) . " = " . $rumusa;
+            echo "\nRumus B yaitu : Luas = 4 * phi * r pangkat 2 = 4 * 3.14 * " . pow($r, 2) . " = " . $rumusb;
+            break;
+
+
+        case 33:
+            echo "---- 33.) MENGHITUNG VOLUME BOLA ----\n";
+            $r = floatval(readline("Masukkan jari-jari atau diameter bola  = \n"));
+            $rumusa = 4.0 / 3.0 * 22 / 7 * pow($r, 3);
+            $rumusb = 4.0 / 3.0 * 3.14 * pow($r, 3);
+            echo "\nRumus A yaitu : Luas = 4/3 * phi * r pangkat 3 = 4/3 * 22/7 * " . pow($r, 3) . " = " . $rumusa;
+            echo "\nRumus B yaitu : Luas = 4/3 * phi * r pangkat 3 = 4/3 * 3.14 * " . pow($r, 3) . " = " . $rumusb;
+            break;
+
+            default:
+            echo " Pilihan anda tidak sesuai dengan tabel pilihan\n";
+    }
+
+    $j = readline("Apakah ingin mencoba program lagi ? [Y/N] \n");
+}
+while ($j =='Y' || $j == 'y');
+echo " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+echo " Terima kasih telah menggunaakan program ini\n";
+echo " Made by Ikkoc_awinata\n";
+}
+
+
+welcome();
+tabel();
+main();
+
+?>

@@ -1,0 +1,51 @@
+<?php
+
+function welcome(){
+    echo "\n=============================================================";
+    echo "\n S E L A M A T   D A T A N G   D I   P R O G R A M";
+    echo "\n INPUT DATA DAN MENENTUKAN NILAI TERBESAR DAN TERKECIL";
+    echo "\n                         BAHASA PHP";
+    echo "\n==============================================================";
+}
+
+
+
+function main(){
+    $n = " "; $terkecil = ""; $terbesar = " "; $bil =""; $j = '';
+    
+
+    do{
+    $n = intval(readline("\nMasukkan banyaknya data yang akan dimasukkan = "));
+    echo " ";
+
+
+    for($i =1; $i<=$n; $i++){
+        $bil = intval(readline("Masukkan bilangan ke- " . $i));
+
+        if($i == 1){
+            $terkecil = $bil;
+            $terbesar = $bil;
+        }else if($bil < $terkecil){
+            $terkecil = $bil;
+        }else if ($terbesar = $bil){
+            $terbesar = $bil;
+        }
+    }
+    echo "\n Nilai terkecilnya adalah = ".$terkecil;
+    echo "\n Nilai terbesar  adalah = ".$terbesar;
+    echo"\n";
+    $j == readline("\nIngin mencoba program lagi ? [Y/N] :");
+}
+while ( $j == 'Y' || $j == 'y');
+echo "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+echo "\n Terima kasih telah menggunaakan program ini";
+echo "\n Made by ikkoc_awinata";
+
+}
+
+welcome();
+main();
+
+
+
+?>

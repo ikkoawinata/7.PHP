@@ -1,0 +1,47 @@
+<?php
+
+function welcome()
+{
+    echo "\n========================================================";
+    echo "\n              SELAMAT DATANG DI PROGRAM ";
+    echo "\n     PERULANGAN WHILE DAN PERCABANGAN IF ELSE (UMUR)";
+    echo "\n                       BAHASA PHP";
+    echo "\n===========================================================";
+}
+
+
+function main()
+{
+    $umur = "";
+    $j = '';
+
+
+    do {
+        $umur = floatval(readline("\nUmur anda berapa sekarang ? "));
+        while ($umur <= 12){
+            echo "\n Saya tidak yakin ymur anda " . $umur;
+            echo "\n Silakan diulangi lagi......";
+
+            $umur = floatval(readline("\nUmur anda berapa sekarang ? "));
+        }
+            if ($umur >= 12 && $umur <= 21) {
+                echo "\n wahh anda baru saja beranjaka dewasa";
+                echo "\n gunakan waktu sebaik-baiknya";
+            } else if ($umur >= 22 && $umur <= 100) {
+                echo "\n anda sudah beranjak tua";
+                echo "\n jadilah seseorang yang dewasa dan jangan lupa perbaiki ibadahmu";
+            } else if ($umur <= 150) {
+                echo "\n WAAHH ANDA SANGAT WAAHH SEKALI";
+            }
+        $j = readline("\n\ningin mencoba program lagi ? [Y/N] : ");
+    }
+    while ($j == 'Y' || $j == 'y');
+    echo "\n Terima kasih telah menggunakan program ini";
+    echo "\n Made by Ikkoc_awinata";
+}
+
+welcome();
+main();
+
+
+?>

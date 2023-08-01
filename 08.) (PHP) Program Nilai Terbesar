@@ -1,0 +1,41 @@
+<?php
+
+function welcome(){
+    echo"========================================================================\n";
+    echo "            S E L A M A T   D A T A N G   D I   P R O G R A M\n"; 
+    echo "                       MENCARI NILAI TERBESAR\n";
+    echo "                             BAHASA PHP\n";
+    echo"========================================================================\n";
+}
+
+
+function main(){
+    $a = " "; $b = " "; $c = " "; $maks = ""; $j = '';
+
+
+    do{
+$a = intval(readline("Masukkan nilai ke-1 = \n"));
+$b = intval(readline("Masukkan nilai ke-2 = \n"));
+$c = intval(readline("Masukkan nilai ke-3 = \n"));
+
+if ( $a > $b){
+    $maks = $a;
+}else{
+    $maks = $b;
+}if ($c > $maks){
+    $maks = $c;
+}
+echo "\njadi nilai terbesarnya adalah = ".$maks;
+$j = readline("\ningin mencoba program lagi ? [Y/N] = \n");
+}
+while ($j == 'Y' || $j == 'y');
+echo " Terima kasih telah menggunakan program ini\n";
+echo " made by Ikkoc_awinata\n";
+}
+
+
+welcome();
+main();
+
+
+?>

@@ -1,0 +1,39 @@
+<?php
+
+function welcome(){
+    echo"============================================================\n";
+    echo"                 P   R   O   G   R   A   M                  \n";
+    echo"     membandingkan nilai integer dan mengeluarkan note      \n";
+    echo"             B  A  H  A  S  A    J  A  V  A                 \n";
+    echo"============================================================\n";
+}
+
+
+welcome();
+
+
+
+$a = " "; $b = " "; $j = '';
+
+
+do{
+$a = intval(readline("\nMasukkan nilai integer a = \n"));
+$b = intval(readline("\nMasukkan nilai integer b = \n"));
+echo " ";
+
+if ( $a > $b){
+    echo "\n nilai A lebih besar dari nilai B";
+}else if ( $a < $b){
+    echo "\n Nilai A lebih kecil dari nilai B";
+}else if ( $a == $b){
+    echo "\n Nilai A dan B sama besar";
+}
+$j = readline(" \ningin mencoba program lagi ? [Y/N] = ");
+}
+while ( $j == 'Y' || $j == 'y');
+echo " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+echo "Terima kasih telah menggunakan program ini\n";
+echo " Made by Ikkoc_awinata\n";
+
+
+?>

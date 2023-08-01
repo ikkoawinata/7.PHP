@@ -1,0 +1,47 @@
+<?php
+
+function welcome(){
+    echo "\n===========================================================";
+    echo "\n                SELAMAT DATANG DI PROGRAM";
+    echo "\n              LULUS I[K (PERCABANGAN IF ELSE";
+    echo" \n                  BAHASA PHP";
+    echo "\n===========================================================";
+}
+
+
+function main(){
+$mhs = ""; $fakultas = ""; $jur = ""; $prodi =""; $ipk = ""; $j =''; $angkatan = "";
+
+
+do{
+
+$$mhs = readline("\nMasukkan nama mahasiswa = [Nama_nama] ");
+$angkatan= readline ("\nangkatan =  ");
+$fakultas = readline("\nFakultas = [rx :Nama_fakultas] :");
+$jurusan = readline("\nJurusan [ex:Nama_Jurusan = ");
+$prodi = readline("\nProgram Studi [ex:Nama_prodi] =");
+$ipk = floatval(readline("Masukkan IPK Terakhir Mahasiswa = "));
+
+
+if($ipk ==4.00){
+    echo "\n Saudara ".$mhs. " angkatan ".$angkatan. "dari ". $fakultas. "dengan ".$jur. "program studi ". $prodi. "lulus dengan IPK sempurna ".$ipk;
+}else if ($ipk == 3.49){
+    echo "\n Saudara ".$mhs. " angkatan ".$angkatan. "dari ". $fakultas. "dengan ".$jur. "program studi ". $prodi. "lulus dengan IPK sangat baik ".$ipk;
+}else if ($ipk ==2.49){
+    echo "\n Saudara ".$mhs. " angkatan ".$angkatan. "dari ". $fakultas. "dengan ".$jur. "program studi ". $prodi. "lulus dengan IPK baik ".$ipk;
+}else if ($ipk == 1.49){
+    echo " \nSaudara ".$mhs. " angkatan ".$angkatan. "dari ". $fakultas. "dengan ".$jur. "program studi ". $prodi. "dinyatakan mengulang dengan IPK ".$ipk;
+}
+$j = readline("\nIngin mencoba program ini lagi ? [Y/N]");
+}
+while ($j == 'Y' || $j == 'y');
+echo "\n Terima kasih telah menggunakan program ini";
+echo "\n Made by Ikkoc_awinata";
+}
+
+
+
+welcome();
+main();
+
+?>

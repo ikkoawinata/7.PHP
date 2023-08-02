@@ -1,0 +1,58 @@
+<?php
+
+function welcome(){
+    echo "==============================================";
+    echo "\n       SELAMAT DATANG DI PROGRAM ";
+    echo "\n        D A T A   S T R U CT";
+    echo "\n               BAHASA PHP";
+    echo "==============================================";
+}
+
+class DataPribadi {
+    private $nama;
+    private $NIM;
+    private $jenisKelamin;
+    private $alamat;
+
+    public function __construct($nama, $NIM, $jenisKelamin, $alamat) {
+        $this->nama = $nama;
+        $this->NIM = $NIM;
+        $this->jenisKelamin = $jenisKelamin;
+        $this->alamat = $alamat;
+    }
+
+    public static function main() {
+        $mahasiswa1 = new DataPribadi("Ikko Cahya Awinata", 22051204038, "Perempuan", "Jl. Sampoerna no 12");
+
+        echo "========================================" . PHP_EOL;
+        echo "Nama          = " . $mahasiswa1->getNama() . PHP_EOL;
+        echo "NIM           = " . $mahasiswa1->getNIM() . PHP_EOL;
+        echo "Jenis Kelamin = " . $mahasiswa1->getJenisKelamin() . PHP_EOL;
+        echo "Alamat        = " . $mahasiswa1->getAlamat() . PHP_EOL;
+        echo "========================================" . PHP_EOL;
+        echo PHP_EOL;
+        echo "Itulah contoh program dengan tipe data class pada PHP" . PHP_EOL;
+    }
+
+    // MENGGUNAKAN KATA "GET"
+    public function getNama() {
+        return $this->nama;
+    }
+
+    public function getNIM() {
+        return $this->NIM;
+    }
+
+    public function getJenisKelamin() {
+        return $this->jenisKelamin;
+    }
+
+    public function getAlamat() {
+        return $this->alamat;
+    }
+}
+
+// Panggil method main untuk menjalankan program
+DataPribadi::main();
+?>
+

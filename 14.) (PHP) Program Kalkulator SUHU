@@ -1,0 +1,171 @@
+<?php
+
+function welcome()
+{
+    echo "\n =========================================================";
+    echo "\n            SELAMAT DATANG DI PROGRAM";
+    echo "\n           K A L K U L A T O R   S U H U ";
+    echo "\n                     BAHASA PHP";
+    echo "\n =========================================================";
+}
+
+
+function main()
+{
+    echo "\n========================================";
+    echo "\nNo.|             Nama Suhu              |";
+    echo "\n========================================";
+    echo "\n1  .| Derajat Celcius    -> Fahrenheit  |";
+    echo "\n2  .| Derajat Fahrenheit -> Celcius     |";
+    echo "\n3  .| Derajat Reamur     -> Fahrenheit  |";
+    echo "\n4  .| Derajat Fahrenheit -> Reamur      |";
+    echo "\n5  .| Derajat Reamur     -> Celcius     |";
+    echo "\n6  .| Derajat Celcius    -> Reamur      |";
+    echo "\n7  .| Derajat Kelvin     -> Celcius     |";
+    echo "\n8  .| Derajat Celcius    -> Kelvin      |";
+    echo "\n9  .| Derajat Kelvin     -> Fahrenheit  |";
+    echo "\n10 .| Derajat Fahrenheit -> Kelvin      |";
+    echo "\n11 .| Derajat Kelvin     -> Reamur      |";
+    echo "\n12 .| Derajat Reamur     -> Kelvin      |";
+    echo "\n========================================";
+
+
+    $c = "";
+    $r = "";
+    $f = "";
+    $k = "";
+    $j = '';
+    $pil = "";
+
+
+    do {
+        $pil = readline("\nMasukkan pilihan anda sesuai dengan yang di tabel = ");
+
+        switch ($pil) {
+            case 1:
+                echo " \n -------- 1.) Anda memilih Celcius -> Fahrenheit -------- ";
+                $c = intval(readline("\nMasukkan suhu celcius yang diketahui = "));
+                $f = (9 / 5 * $c) + 32;
+                echo " \n Rumusnya yaoitu : 9/5 * °C + (32) = 9/5 * " . $c . " + (32) =  " . $f;
+                echo "\n Hasilnya adalah " . $f . " derajat fahrenheit";
+                break;
+
+
+            case 2:
+                echo " \n --------2.) Anda memilih Fahrenheit  -> Celcius-------- ";
+                $f = intval(readline("\nMasukkan suhu fahrenheit yang diketahui = "));
+                $c = 5 / 9 * ($f - (32));
+                echo "\n Rumusnya yaitu : 5/9 * °F - (32) = 5/9 *" . $c . " - (32) = " . $c;
+                echo "\n Hasilnya adalah " . $c . " derajat celcius";
+                break;
+
+
+
+            case 3:
+                echo " \n --------3.) Anda memilih Reamur -> Fahrenheit-------- ";
+                $r = intval(readline("\nMasukkan suhu reamur yang diketahui = "));
+                $f = (9 / 4 * $r) + (32);
+                echo "\n Rumusnya yaitu : 9/4 * °R + (32) = 9/4 * " . $r . " + (32) = " . $f;
+                echo "\n Hasilnya adalah " . $f . " derajat fahrenheit";
+                break;
+
+
+            case 4:
+                echo " \n --------4.) Anda memilih Fahrenheit -> Reamur-------- ";
+                $f = intval(readline("\nMasukkan suhu fahrenheit yang diketahui = "));
+                $r = 4 / 9 * ($f - 32);
+                echo "\n Rumusnya yaitu : (4/9) * (°R -32) = (4/9) * (" . $f . " - 32) = " . $r;
+                echo "\n Hasilnya adalah " . $r . " derajat reamur";
+                break;
+
+
+            case 5:
+                echo " \n -------- 5 .) Anda memilih Reamur -> Celcius -------- ";
+                $r = intval(readline("\nMasukkan suhu reamur yang diketahui = "));
+                $c = 5 / 4 * $r;
+                echo "\n Rumusnya yaitu : 5/4 * °R = 5/4 * " . $r . " = " . $c;
+                echo "\n Hasilnya adalah " . $c . " derajat celcius";
+                break;
+
+
+
+            case 6:
+                echo " \n --------6 .) Anda memilih Celcius -> Reamur-------- ";
+                $c = intval(readline("\nMasukkan suhu celcius yang diketahui = "));
+                $r = 4 / 5 * $c;
+                echo "\n Rumusnya yaitu : 4/5 * °C = 4/5 * " . $c . " = " . $r;
+                echo "\n Hasilnya adalah " . $r . " derajat reamur";
+                break;
+
+
+            case 7:
+                echo " \n --------7 .) Anda memilih Kelvin -> Celcius-------- ";
+                $k = intval(readline("\nMasukkan suhu kelvin yang diketahui = "));
+                $c = 273 - $k;
+                echo "\nRumusnya yaitu : 273 -  °K = 273 -" . $k . " = " . $c;
+                echo "\n Hasilnya adalah " . $c . " derajat celcius";
+                break;
+
+
+
+            case 8:
+                echo " \n --------8 .) Anda memilih Celcius -> Kelvin-------- ";
+                $c = intval(readline("\nMasukkan suhu celcius yang diketahui = "));
+                $k = 273 + $c;
+                echo "\n Rumusnya yaitu : 273 +  °K = 273 +" . $c . " = " . $k;
+                echo "\n Hasilnya adalah " . $k . " derajat kelvin";
+                break;
+
+
+            case 9:
+                echo " \n -------- 9 .) Anda memilih Kelvin -> Fahrenheit--------- ";
+                $k = intval(readline("\nMasukkan suhu kelvin yang diketahui = "));
+                $f = 9 / 5 * ($k - 273) + 32;
+                echo "\n Rumusnya yaitu : 273 +  °K = 273 +" . $f . " = " . $k;
+                echo "\n Hasilnya adalah " . $f . " derajat fahrenheit";
+                break;
+
+
+
+            case 10:
+                echo " \n -------- 10 .) Anda memilih Fahrenheit -> Kelvin--------- ";
+                $f = intval(readline("\nMasukkan suhu fahrenheit yang diketahui = "));
+                $k = 5 / 9 * ($f - 32) + 273;
+                echo "\n Rumusnya yaitu : 5/9 * (°F - 32) + 273 = 5/9 * (" . $f . "- 32 + 273 = " . $k;
+                echo "\n Hasilnya adalah " . $k . " derajat kelvin";
+                break;
+
+
+            case 11:
+                echo " \n --------11 .) Anda memilih Kelvin -> Reamur --------- ";
+                $k = intval(readline("\nMasukkan suhu kelvin yang diketahui = "));
+                $r = 4 / 5 * ($k - 273);
+                echo "\n Rumusnya yaitu : (4/5 * °K) - 273 = (4/5 * " . $k . ") - 273 = " . $r;
+                echo "\n Hasilnya adalah " . $r . " derajat reamur";
+                break;
+
+
+
+            case 12:
+                echo " \n --------12 .) Anda memilih Reamur -> Kelvin--------- ";
+                $r = intval(readline("\nMasukkan suhu kelvin yang diketahui = "));
+                $k = (5 / 4 * $r) + 273;
+                echo "\n Rumusnya yaitu : (5/4 * °R) + 273 = (5/4 * " . $r . ") + 273 = " . $k;
+                echo "\n Hasilnya adalah " . $k . " derajat kelvin";
+                break;
+
+            default:
+                echo "\n Pilihan anda tidak sesuai dengan tabel ";
+                break;
+        }
+        $j = readline("\n\ningin coba program lagi ? [Y/N] : ");
+    }
+    while ($j == 'Y' || $j == 'y');
+    echo "\n================================================";
+    echo "\n Terima kasih telah menggunakan program ini";
+    echo "\n Made by ikkoc_awinata";
+}
+
+welcome();
+main();
+?>

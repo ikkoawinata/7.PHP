@@ -1,0 +1,44 @@
+<?php
+
+
+function welcome()
+{
+    echo "\n===================================================";
+    echo "\n          SELAMAT DATANG DI PROGRAM";
+    echo "\n         P E M B A G I A N  +  N O T E";
+    echo "\n                  BAHASA PHP";
+    echo "\n===================================================";
+}
+
+
+
+function main()
+{
+    $a = " ";
+    $b = " ";
+    $hasil = " ";
+    $j = '';
+
+
+    do {
+        $a = intval(readline("\nMasukkan bilangan yang akan dibagi = "));
+        $b = intval(readline("\nmasukkan bilangan pembagi = "));
+
+        if ($b == 0) {
+            echo "\n tidak dapat dibagi dengan angka nol, maka hasilnya akan tetap";
+        } else if ($hasil = $a / $b) {
+            echo " \n hasi dari pembagian " . $a . " / " . $b . " = " . $hasil;
+        }
+        $j = readline("\n\ningin coba program lagi ? [Y/N] : ");
+    }
+    while ($j == 'Y' || $j == 'y');
+    echo "\=============================================================";
+    echo "\n terima kasih telah menggunakan program ini";
+    echo "\n made by ikkoc_awinata";
+}
+
+
+welcome();
+main();
+
+?>

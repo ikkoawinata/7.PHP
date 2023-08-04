@@ -1,0 +1,424 @@
+<?php
+
+function welcome()
+{
+    echo "\n================================================================";
+    echo "\n                SELAMAT DATANG DI PROGRAM ";
+    echo "\n                  CONVERT SATUAN PANJANG";
+    echo "\n                        BAHASA PHP";
+    echo "\n =========================================================================";
+}
+
+
+function tabel()
+{
+    echo "\n================================================================================";
+    echo "\nNO |                 SATUAN PANJANG               ";
+    echo "\n================================================================================";
+    echo "\n1.  | KM (Kilometer);       ->   HM (Hektometer);                                 |";
+    echo "\n2.  | KM (Kilometer);       ->   DAM (Dekameter);                                 |";
+    echo "\n3.  | KM (Kilometer);       ->   M (Meter);                                       |";
+    echo "\n4.  | KM (Kilometer);       ->   DM (Desimeter);                                  |";
+    echo "\n5.  | KM (Kilometer);       ->   CM (Centimeter);                                 |";
+    echo "\n6.  | KM (Kilometer);       ->   MM (Milimeter);                                  |";
+    echo "\n7.  | HM (Hektometer);      ->   KM (Kilometer);                                  |";
+    echo "\n8.  | HM (Hektometer);      ->   DAM (Dekameter);                                 |";
+    echo "\n9.  | HM (Hektometer);      ->   M (Meter);                                       |";
+    echo "\n10. | HM (Hektometer);      ->   DM (Desimeter);                                  |";
+    echo "\n11. | HM (Hektometer);      ->   CM (Centimeter);                                 |";
+    echo "\n12. | HM (Hektometer);      ->   MM (Milimeter);                                  |";
+    echo "\n13. | DAM (Dekameter);      ->   KM (Kilometer);                                  |";
+    echo "\n14. | DAM (Dekameter);      ->   HM (Hektometer);                                 |";
+    echo "\n15. | DAM (Dekameter);      ->   M (Meter);                                       |";
+    echo "\n16. | DAM (Dekameter);      ->   DM (Desimeter);                                  |";
+    echo "\n17. | DAM (Dekameter);      ->   CM (Centimeter);                                 |";
+    echo "\n18. | DAM (Dekameter);      ->   MM (Milimeter);                                  |";
+    echo "\n19. | M (Meter);            ->   KM (Kilometer);                                  |";
+    echo "\n20. | M (Meter);            ->   HM (Hektometer);                                 |";
+    echo "\n21. | M (Meter);            ->   DAM (Dekameter);                                 |";
+    echo "\n22. | M (Meter);            ->   DM (Desimeter);                                  |";
+    echo "\n23. | M (Meter);            ->   CM (Centimeter);                                 |";
+    echo "\n24. | M (Meter);            ->   MM (Milieter);                                   |";
+    echo "\n25. | DM (Desimeter);       ->   KM (Kilometer);                                  |";
+    echo "\n26. | DM (Desimeter);       ->   HM (Hektometer);                                 |";
+    echo "\n27. | DM (Desimeter);       ->   DAM (Dekameter);                                 |";
+    echo "\n28. | DM (Desimeter);       ->   M (Meter);                                       |";
+    echo "\n29. | DM (Desimeter);       ->   CM (Centimeter);                                 |";
+    echo "\n30. | DM (Desimeter);       ->   MM (Milimeter);                                  |";
+    echo "\n31. | CM (Centimeter);      ->   KM (Kilometer);                                  |";
+    echo "\n32. | CM (Centimeter);      ->   HM (Hektometer);                                 |";
+    echo "\n33. | CM (Centimeter);      ->   DAM (Dekameter);                                 |";
+    echo "\n34. | CM (Centimeter);      ->   M (Meter);                                       |";
+    echo "\n35. | CM (Centimeter);      ->   DM (Desimeter);                                  |";
+    echo "\n36. | CM (Centimeter);      ->   MM (Milimeter);                                  |";
+    echo "\n37. | MM (Milimeter);       ->   KM (Kilometer);                                  |";
+    echo "\n38. | MM (Milimeter);       ->   HM (Hektometer);                                 |";
+    echo "\n39. | MM (Milimeter);       ->   DAM (Dekameter);                                 |";
+    echo "\n40. | MM (Milimeter);       ->   M (Meter);                                       |";
+    echo "\n41. | MM (Milimeter);       ->   DM (Desimeter);                                  |";
+    echo "\n42. | MM (Milimeter);       ->   CM (Centimeter);                                 |";
+    echo "\n================================================================================";
+}
+
+
+function main()
+{
+    $user = "";
+    $pil = "";
+    $rumus = "";
+    $j = '';
+
+
+    do {
+        welcome();
+        $pil = intval(readline("\nSilakan pilih sesuai tabel = "));
+        echo "\n";
+
+        switch ($pil) {
+            case 1:
+                echo "\n ------ 1.) KM -> HM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 10;
+                echo "\n" . $user . " * 100 = " . $rumus . " HM ";
+                break;
+
+
+
+            case 2:
+                echo "\n ------ 2.) KM -> DAM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 100;
+                echo "\n" . $user . " * 100 = " . $rumus . " DAM ";
+                break;
+
+
+            case 3:
+                echo "\n ------ 3.) KM -> M -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 1000;
+                echo "\n" . $user . " * 1000 = " . $rumus . " M ";
+                break;
+
+
+            case 4:
+                echo "\n------ 4.) KM -> DM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 10000;
+                echo "\n" . $user . " * 10000 = " . $rumus . " DM ";
+                break;
+
+
+
+            case 5:
+                echo "\n------ 5.) KM -> CM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 100000;
+                echo "\n" . $user . " * 100000 = " . $rumus . " CM ";
+                break;
+
+
+
+            case 6:
+                echo "\n------ 6.) KM -> MM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 1000000;
+                echo "\n" . $user . " * 1000000 = " . $rumus . " MM ";
+                break;
+
+
+            case 7:
+                echo "\n------ 7.) HM -> KM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 10;
+                echo "\n" . $user . " / 10 = " . $rumus . " KM ";
+                break;
+
+
+            case 8:
+                echo "\n------  8.) HM -> DAM-------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 10;
+                echo "\n" . $user . " * 10 = " . $rumus . " DAM ";
+                break;
+
+
+            case 9:
+                echo "\n------  9.) HM -> M-------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 100;
+                echo "\n" . $user . " * 100 = " . $rumus . " M ";
+                break;
+
+            case 10:
+                echo "\n------  10.) HM -> DM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 1000;
+                echo "\n" . $user . " * 1000 = " . $rumus . " DM ";
+                break;
+
+
+            case 11:
+                echo "\n------ 11.) HM -> CM  -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 10000;
+                echo "\n" . $user . " * 10000 = " . $rumus . " CM ";
+                break;
+
+            case 12:
+                echo "\n------ 12.) HM -> MM  -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 100000;
+                echo "\n" . $user . " * 100000 = " . $rumus . " MM ";
+                break;
+
+            case 13:
+                echo "\n------ 13.) DAM -> KM  -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 100;
+                echo "\n" . $user . " / 100 = " . $rumus . " MM ";
+                break;
+
+            case 14:
+                echo "\n------  14.) DAM -> HM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 10;
+                echo "\n" . $user . " / 10 = " . $rumus . " HM ";
+                break;
+
+            case 15:
+                echo "\n------ 15.) DAM -> M -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 10;
+                echo "\n" . $user . " * 10 = " . $rumus . " MM ";
+                break;
+
+
+            case 16:
+                echo "\n------- 16.) DAM -> DM-------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 100;
+                echo "\n" . $user . " * 100 = " . $rumus . " DM ";
+                break;
+
+
+            case 17:
+                echo "\n-------17.) DAM -> CM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 1000;
+                echo "\n" . $user . " * 1000 = " . $rumus . " CM ";
+                break;
+
+            case 18:
+                echo "\n------- 18.) DAM -> MM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 10000;
+                echo "\n" . $user . " * 10000 = " . $rumus . " MM ";
+                break;
+
+
+            case 19:
+                echo "\n------- 19.) M -> KM  -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 1000;
+                echo "\n" . $user . " / 10000 = " . $rumus . " KM ";
+                break;
+
+
+            case 20:
+                echo "\n------- 20.) M -> HM  -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 100;
+                echo "\n" . $user . " / 100 = " . $rumus . " HM ";
+                break;
+
+
+            case 21:
+                echo "\n------- 21.) M -> DAM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 10;
+                echo "\n" . $user . " / 10 = " . $rumus . " DAM ";
+                break;
+
+            case 22:
+                echo "\n-------22.) M -> DM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 10;
+                echo "\n" . $user . " * 10 = " . $rumus . " DM ";
+                break;
+
+
+            case 23:
+                echo "\n------- 23.) M -> CM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 100;
+                echo "\n" . $user . " * 100 = " . $rumus . " CM ";
+                break;
+
+
+            case 24:
+                echo "\n------- 24.) M -> MM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 1000;
+                echo "\n" . $user . " * 1000 = " . $rumus . " MM ";
+                break;
+
+            case 25:
+                echo "\n-------25.) DM -> KM-------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 10000;
+                echo "\n" . $user . " * 1000 = " . $rumus . " MM ";
+                break;
+
+
+            case 26:
+                echo "\n-------26.) DM -> HM-------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 1000;
+                echo "\n" . $user . " / 1000 = " . $rumus . " HM ";
+                break;
+
+
+            case 27:
+                echo "\n------- 27.) DM -> DAM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 100;
+                echo "\n" . $user . " / 100 = " . $rumus . " DAM ";
+                break;
+
+
+            case 28:
+                echo "\n------- 28.) DM -> M -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 10;
+                echo "\n" . $user . " / 10 = " . $rumus . " M ";
+                break;
+
+            case 29:
+                echo "\n------- 29.) DM -> CM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 10;
+                echo "\n" . $user . " * 10 = " . $rumus . " CM ";
+                break;
+
+            case 30:
+                echo "\n------- 30.) DM -> MM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 100;
+                echo "\n" . $user . " * 100 = " . $rumus . " MM ";
+                break;
+
+
+            case 31:
+                echo "\n------- 31.) CM -> KM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 100000;
+                echo "\n" . $user . " / 100000 = " . $rumus . " KM ";
+                break;
+
+
+            case 32:
+                echo "\n-------  32.) CM -> HM-------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 10000;
+                echo "\n" . $user . " / 10000 = " . $rumus . " HM ";
+                break;
+
+
+            case 33:
+                echo "\n------- 33.) CM -> DAM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 1000;
+                echo "\n" . $user . " / 1000 = " . $rumus . " DAM ";
+                break;
+
+
+            case 34:
+                echo "\n------- 34.) CM -> M -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 100;
+                echo "\n" . $user . " / 100 = " . $rumus . " M ";
+                break;
+
+
+            case 35:
+                echo "\n------- 35.) CM -> DM  -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 10;
+                echo "\n" . $user . " / 10 = " . $rumus . " DM ";
+                break;
+
+            case 36:
+                echo "\n-------  36.) CM -> MM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user * 10;
+                echo "\n" . $user . " * 10 = " . $rumus . " MM ";
+                break;
+
+
+            case 37:
+                echo "\n------- 37.) MM -> KM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 1000000;
+                echo "\n" . $user . " / 1000000 = " . $rumus . " KM ";
+                break;
+
+
+            case 38:
+                echo "\n------- 38.) MM -> HM-------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 100000;
+                echo "\n" . $user . " / 100000 = " . $rumus . " HM ";
+                break;
+
+
+            case 39:
+                echo "\n-------39.) MM -> DAM -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 10000;
+                echo "\n" . $user . " / 10000 = " . $rumus . " DAM ";
+                break;
+
+
+            case 40:
+                echo "\n------- 40.) MM -> M -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 1000;
+                echo "\n" . $user . " / 1000 = " . $rumus . " M ";
+                break;
+
+
+
+            case 41:
+                echo "\n------- 41.) MM -> DM  -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 100;
+                echo "\n" . $user . " / 100 = " . $rumus . " DM ";
+                break;
+
+
+            case 42:
+                echo "\n------- 42.) MM -> CM   -------- ";
+                $user = intval(readline("\nMasukkan angka = "));
+                $rumus = $user / 10;
+                echo "\n" . $user . " / 10 = " . $rumus . " CM ";
+                break;
+
+
+            default:
+                echo "\n Pilihan tidak sesuai dengan tebal";
+                echo "\n silakan masukan pilihan anda sesuai dengan tabel";
+                echo "\n";
+                break;
+
+        }
+        $j = readline("\ningin mencoba program lagi = ");
+    } while ($j == 'Y' || $j == 'y');
+    echo "\n Terima kasih telah menggunakan program ini ";
+    echo "\n made by ikkoc_awinata";
+}
+
+
+welcome();
+tabel();
+main();
+?>

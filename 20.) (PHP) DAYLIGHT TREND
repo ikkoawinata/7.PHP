@@ -1,0 +1,61 @@
+<?php
+
+function welcome()
+{
+    echo "\n===================================================";
+    echo "\n          SELAMAT DATANG DI PROGRAM";
+    echo "\n            D A Y L I G H T   T R E N D";
+    echo "\n                  BAHASA PHP";
+    echo "\n===================================================";
+}
+
+
+function main(){
+    //ITERASI PERTAMA
+    $x = 20;
+    echo "\n";
+    echo "\nand i can still see it all";
+    $input = trim(fgets(STDIN));
+    echo "\n";
+    for (; $x > 0; $x--){
+        echo "\nA A A A A A A A A A A A A A A A A A A A A A A A A A";
+    }
+
+    echo "\n ===========================================================================";
+    echo "\n";
+
+
+    //ITERASI KEDUA
+    $x = 20;
+    echo "\n";
+    echo "\nand i can still see it all";
+    $input = trim(fgets(STDIN));
+    echo "\n";
+    for (; $x > 0; $x--){
+        echo "\nA A A A A A A A A A A A A A A A A A A A A A A A A A";
+    }
+
+
+    echo "\n ===========================================================================";
+    echo "\n";
+
+
+    $x = 20;
+    echo "\n";
+    echo "\ni once believed love would be";
+    $input = trim(fgets(STDIN));
+    echo "\n";
+    for (; $x > 0; $x--){
+        echo "\nA A A A A A A A A A A A A A A A A A A A A A A A A A";
+    }
+
+
+    echo "\n ===========================================================================";
+    echo "\n";
+}
+
+welcome();
+main();
+
+
+?>

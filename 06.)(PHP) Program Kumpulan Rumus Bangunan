@@ -367,7 +367,7 @@ function main()
             break;
 
         case 31:
-            echo "---- 30.) MENGHITUNG LUAS PERMUKAAN KERUCUT ----\n";
+            echo "---- 31.) MENGHITUNG VOLUME PERMUKAAN KERUCUT ----\n";
             $r = floatval(readline("Masukkan jari-jari kerucut  = \n"));
             $tinggi = floatval(readline("Masukkan sisi kerucut = \n"));
             $rumusa = 1.0 / 3.0 * 22.0 / 7.0 * pow($r, 2) * $tinggi;

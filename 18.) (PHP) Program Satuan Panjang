@@ -79,7 +79,7 @@ function main()
                 echo "\n ------ 1.) KM -> HM -------- ";
                 $user = intval(readline("\nMasukkan angka = "));
                 $rumus = $user * 10;
-                echo "\n" . $user . " * 100 = " . $rumus . " HM ";
+                echo "\n" . $user . " * 10 = " . $rumus . " HM ";
                 break;
 
 

@@ -266,7 +266,7 @@ function main()
                 echo "\n-------25.) DM -> KM-------- ";
                 $user = intval(readline("\nMasukkan angka = "));
                 $rumus = $user * 10000;
-                echo "\n" . $user . " * 1000 = " . $rumus . " MM ";
+                echo "\n" . $user . " * 1000 = " . $rumus . " KM ";
                 break;
 
 

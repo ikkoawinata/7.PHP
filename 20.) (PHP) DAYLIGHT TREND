@@ -28,7 +28,7 @@ function main(){
     //ITERASI KEDUA
     $x = 20;
     echo "\n";
-    echo "\nand i can still see it all";
+    echo "\nall of you, all of me";
     $input = trim(fgets(STDIN));
     echo "\n";
     for (; $x > 0; $x--){

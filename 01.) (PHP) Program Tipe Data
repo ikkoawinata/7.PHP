@@ -1,32 +1,46 @@
 <?php
-function welcome(){
-echo "=============================================================\n";
-echo "                      MENGETAHUI TIPE DATA\n";
-echo "                       B A H A S A    P H P\n";
-echo "=============================================================\n";
+
+function judul() {
+    echo "=====================================================\n";
+    echo "              SELAMAT DATANG DI PROGRAM              \n";
+    echo "                MENGETAHUI TIPE DATA                 \n";
+    echo "=====================================================\n";
 }
 
-//ini adalah fungsi void  yang berisi tipe data 
-function coba(){
-    $x = " Hello World\n";
-    $y = 'F';
-    $num =12;
-    $float =12.67;
-    $bool =True;
-    $bool1 =false;
-    $array = array(3,2,4,5);
+function main() {
+    judul();
 
+    echo "1.) TIPE DATA INTEGER\n";
+    $dataInteger = 0;
+    echo "Data     : $dataInteger\n";
+    echo "Bertipe  : " . gettype($dataInteger) . "\n\n";
 
-// ini fungsi untuk mencetak atau print
-    var_dump("ini adalah tipe data String = \n".$x);//memakai titik (.)
-    var_dump("ini adalah tipe data char = \n".$y);
-    var_dump("ini adalah tipe data integer = \n".$num);
-    var_dump("ini adalah tipe data Boolean (Benar/True) = \n".$bool);
-    var_dump("ini adalah tipe data Boolean (Salah/False) = \n".$bool1);
-    var_dump("ini adalah tipe data array = \n".$array);
+    echo "2.) TIPE DATA FLOAT\n";
+    $dataFloat = 6.08;
+    echo "Data     : $dataFloat\n";
+    echo "Bertipe  : " . gettype($dataFloat) . "\n\n";
+
+    echo "3.) TIPE DATA STRING\n";
+    $dataString = "Ikko Cahya Awinata";
+    echo "Data     : $dataString\n";
+    echo "Bertipe  : " . gettype($dataString) . "\n\n";
+
+    echo "4.) TIPE DATA BOOLEAN\n";
+    $dataBool = true;
+    echo "Data     : $dataBool\n";
+    echo "Bertipe  : " . gettype($dataBool) . "\n\n";
+
+    echo "5.) TIPE DATA CHAR\n";
+    $dataChar = 'F';
+    echo "Data     : $dataChar\n";
+    echo "Bertipe  : " . gettype($dataChar) . "\n\n";
+
+    echo "6.) TIPE DATA ARRAY\n";
+    $dataArray = array(1, 2, 3, 4, 5);
+    echo "Data     : " . implode(", ", $dataArray) . "\n";
+    echo "Bertipe  : " . gettype($dataArray) . "\n\n";
 }
 
-welcome();
-coba();
+main();
+
 ?>
-
